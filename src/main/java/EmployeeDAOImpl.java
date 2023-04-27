@@ -12,7 +12,7 @@ public class EmployeeDAOImpl {
 */
         final String user = "postgres";
         final String password = "RAMADAN38278857";
-        final String url = "jdbc:postgresql://localhost:5432/skypro2";
+        final String url = "jdbc:postgresql://localhost:5432/skypro2 ";
 
 
         try (final Connection connection =
