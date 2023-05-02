@@ -1,49 +1,27 @@
+import skypro.CiTY2;
 import skypro.Employee;
 
-import java.sql.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class EmployeeDAOImpl {
-    public static void main(String[] args) {
-   /* @Override
-    public List<Employee> getAllEmployee() {
-        List<Employee> employees = new ArrayList<>();
-*/
-        final String user = "postgres";
-        final String password = "RAMADAN38278857";
-        final String url = "jdbc:postgresql://localhost:5432/skypro2 ";
+    public static void main(String[] args)throws SQLException {
+
+        EmployeeDAO employeeDAO = new Realization();
 
 
-        try (final Connection connection =
-                     DriverManager.getConnection(url, user, password);
-             PreparedStatement statement =
-                     connection.prepareStatement("SELECT * FROM employee JOIN CITY ON CITY.city_id = employee.city_id WHERE id = 2;")) {
+       // employeeDAO.setEmployee(new Employee(7, "Марина", "Варонова", "W", 27, new CiTY2(7, "Россия")));
+
+       // employeeDAO.deleteEmployee(7);
 
 
-            ResultSet resultSet = statement.executeQuery();
+      //  employeeDAO.getEmployeeId(5);
 
-            while (resultSet.next()) {
-                int id = resultSet.getInt("id");
-                System.out.println("ID сотрудника: " + id);
-                String first_nama = resultSet.getString("first_nama");
-                String last_name = resultSet.getString("last_name");
-                String gender = resultSet.getString("gender");
-                int age = resultSet.getInt("age");
-                int city_id = resultSet.getInt("city_id");
+     //  employeeDAO.ChangeEmployeebyID(new Employee(2, "Селеста", "Каришева", "Ж", 45, new CiTY2(8, "Франция")));
 
-                System.out.println("Имя: " + first_nama);
-                System.out.println("Фамилия : " + last_name);
-                System.out.println("Пол: " + gender);
-                System.out.println("Возрост" + age);
-                System.out.println("Страна" + city_id);
-
-
-            }
-        } catch (SQLException e) {
-            System.out.println("Ошибка при подключении к базе данных!");
-            e.printStackTrace();
-        }
-      //  return employees;
+        employeeDAO.gerEmployee().stream().forEachOrdered(System.out::println);
     }
-}
+    }
