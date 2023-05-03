@@ -1,11 +1,11 @@
 package skypro;
 
-public class CiTY2 {
+public class Citytwo {
 
     private  int city_id;
     private  String city_name;
 
-    public CiTY2(int city_id, String city_name) {
+    public Citytwo(int city_id, String city_name) {
         this.city_id = city_id;
         this.city_name = city_name;
     }

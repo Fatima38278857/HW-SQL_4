@@ -1,16 +1,12 @@
-import skypro.CiTY2;
-import skypro.Employee;
+package skypro;
 
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 
-public class EmployeeDAOImpl {
+public class Application {
     public static void main(String[] args)throws SQLException {
 
-        EmployeeDAO employeeDAO = new Realization();
+        EmployeeDAO employeeDAO = new EmployeeDAOImpl();
 
 
        // employeeDAO.setEmployee(new Employee(7, "Марина", "Варонова", "W", 27, new CiTY2(7, "Россия")));
