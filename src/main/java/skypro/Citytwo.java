@@ -1,6 +1,6 @@
 package skypro;
 
-public class Citytwo {
+public class Citytwo{
 
     private  int city_id;
     private  String city_name;

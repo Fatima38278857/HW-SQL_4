@@ -3,7 +3,7 @@ package skypro;
 import java.sql.SQLException;
 
 
-public class Application {
+public class Application{
     public static void main(String[] args)throws SQLException {
 
         EmployeeDAO employeeDAO = new EmployeeDAOImpl();
