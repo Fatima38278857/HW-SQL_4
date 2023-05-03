@@ -1,12 +1,12 @@
-import skypro.CiTY2;
-import skypro.Employee;
+package skypro;
+
 import java.sql.SQLException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 
-public  class Realization implements EmployeeDAO {
+public  class EmployeeDAOImpl implements EmployeeDAO {
 
 
     public Employee setEmployee(Employee employee) throws SQLException{ // СОЗДАТЬ (добавление) сущности Employee в таблицу.
@@ -47,7 +47,7 @@ public  class Realization implements EmployeeDAO {
                String gender = resultSet.getString("gender");
                int age = resultSet.getInt("age");
                int city_id = resultSet.getInt("city_id");
-             //  String city_name = resultSet.getString("city_name");
+
 
            }
         } catch (SQLException e) {
@@ -72,7 +72,7 @@ public  class Realization implements EmployeeDAO {
                 int city_id = resultSet1.getInt("city_id");
                 String city_name = resultSet1.getString("city_name");
 
-                employees.add(new Employee(id, first_nama, last_name, gender, age, new CiTY2(city_id, city_name)));
+                employees.add(new Employee(id, first_nama, last_name, gender, age, new Citytwo(city_id, city_name)));
             }
 
             }catch (SQLException e) {
